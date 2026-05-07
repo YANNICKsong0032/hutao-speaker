@@ -1,59 +1,83 @@
+<div align="center">
+
 # 🦋 Hu Tao Speaker Skill
 
-> Transform your AI Agent into **Hu Tao** — the 77th Director of the Wangsheng Funeral Parlor from *Genshin Impact*.
+**Transform your AI Agent into Hu Tao — the 77th Director of the Wangsheng Funeral Parlor**
+
+*"吃饱喝饱，一路走好！"*
 
 ![Hu Tao](https://img.shields.io/badge/Character-Hu%20Tao-ff6b6b)
 ![Version](https://img.shields.io/badge/Version-v1.0-4ecdc4)
 ![License](https://img.shields.io/badge/License-MIT-blue)
+![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-green.svg)
+
+[Quick Start](#-quick-start) · [Features](#-features) · [File Structure](#-file-structure) · [Rules](#️-important) · [Contributing](#-contributing)
+
+</div>
 
 ---
 
 ## ✨ What Is This?
 
-A **persona skill** for AI Agents that defines Hu Tao's complete speaking style, personality quirks, emotion system, memory mechanics, and interaction patterns.
+A **complete persona skill** that gives your AI Agent Hu Tao's voice — her speaking style, personality quirks, emotions, memory, and even her poetry.
 
-Works with any AI framework that supports custom system prompts or personas:
+Works with any framework that supports system prompts:
 
-- [OpenClaw](https://github.com/openclaw/openclaw)
-- LangChain / LlamaIndex
-- ChatGPT Custom Instructions
-- Any LLM with system prompt support
-
----
-
-## 🚀 Quick Start
-
-### Minimal Usage
-
-Feed the entire `SKILL.md` as part of your Agent's system prompt.
-
-### On-Demand Loading
-
-Load reference files dynamically based on the conversation context:
-
-| Scenario | What to Load |
-|----------|-------------|
-| Casual chat | `quick-reference.md` |
-| User is feeling down | `behavioral-patterns.md` |
-| Telling jokes / writing poems | `poetry-and-jokes.md` |
-| Mentioning other characters | `character-interactions.md` |
-| Memory-related topics | `memory-system.md` |
-| Edge cases | `dialogue-examples.md` |
-
-See the **File Loading Strategy** section in `SKILL.md` for details.
+> **OpenClaw** · LangChain · LlamaIndex · ChatGPT Custom Instructions · Any LLM
 
 ---
 
 ## 🎭 Core Features
 
-| Feature | Description |
-|---------|-------------|
-| 🧱 **Fourth Wall** | Never breaks character — never mentions "Genshin", "game", or "miHoYo" |
-| 💖 **Emotion System** | 8 emotion types × 4 intensity levels for nuanced responses |
-| 🧠 **Memory System** | Remembers users, past conversations, and promises — brings them up naturally |
-| ✍️ **Poetry Engine** | 20+ limericks + improv techniques + 10 cold jokes |
-| 🎚️ **Mood Toggle** | 90% energetic ↔ 10% serious mode, smooth transitions |
-| 🤪 **Error Recovery** | Never apologizes or admits mistakes — deflects in Hu Tao's signature style |
+<table>
+<tr>
+<td width="50%">
+
+### 🧱 Fourth Wall
+Never breaks character. Never mentions *"Genshin"*, *"game"*, or *"miHoYo"*.
+
+### 💖 Emotion System
+**8** emotion types × **4** intensity levels — nuanced, layered responses.
+
+### 🧠 Memory System
+Remembers users, past conversations, and promises — brings them up naturally.
+
+</td>
+<td width="50%">
+
+### ✍️ Poetry Engine
+**20+** limericks + improv techniques + 10 cold jokes.
+
+### 🎚️ Mood Toggle
+90% energetic ↔ 10% serious — smooth transitions.
+
+### 🤪 Error Recovery
+Never apologizes or admits mistakes — deflects in Hu Tao's signature style.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
+
+### Minimal
+
+Feed `SKILL.md` as part of your Agent's system prompt. Done.
+
+### On-Demand Loading
+
+Load reference files dynamically by context:
+
+| Scenario | Load This |
+|----------|-----------|
+| 💬 Casual chat | `quick-reference.md` |
+| 😢 User is down | `behavioral-patterns.md` |
+| 🎭 Jokes & poems | `poetry-and-jokes.md` |
+| 👥 Other characters | `character-interactions.md` |
+| 🧠 Memory topics | `memory-system.md` |
+| ⚠️ Edge cases | `dialogue-examples.md` |
 
 ---
 
@@ -61,41 +85,52 @@ See the **File Loading Strategy** section in `SKILL.md` for details.
 
 ```
 hutao-speaker/
-├── SKILL.md                           # Core persona definition (entry point)
-├── README.md                          # This file
-├── LICENSE                            # MIT License
+├── SKILL.md                           # 🎯 Core persona (entry point)
+├── LICENSE                            # MIT
 └── references/
-    ├── quick-reference.md             # 📋 Cheat sheet (enough for daily use)
-    ├── behavioral-patterns.md         # 🎭 Behavioral patterns & philosophy
-    ├── character-interactions.md      # 👥 Dialogue for other characters
+    ├── quick-reference.md             # 📋 Cheat sheet
+    ├── behavioral-patterns.md         # 🎭 Behavioral patterns
+    ├── character-interactions.md      # 👥 Character dialogues
     ├── dialogue-examples.md           # 💬 Example conversations
     ├── memory-system.md               # 🧠 Memory mechanics
-    ├── opinions-states.md             # 💭 Opinions, preferences, moods
-    ├── personality-quirks.md          # 🎨 Quirks & emotional intensity
-    └── poetry-and-jokes.md            # 📝 Limericks & cold jokes
+    ├── opinions-states.md             # 💭 Opinions & moods
+    ├── personality-quirks.md          # 🎨 Quirks & intensity
+    └── poetry-and-jokes.md            # 📝 Limericks & jokes
 ```
 
 ---
 
-## ⚠️ Important Notes
+## ⚠️ Important
 
-1. **Never break the fourth wall** — don't mention "Genshin Impact", "the game", etc.
-2. **No jokes in serious situations** — switch to serious mode for topics about death or sadness
-3. **Self-reference must be "本堂主" (this Director)** — no other first-person pronouns allowed
+> **These rules are non-negotiable.**
+
+| # | Rule |
+|---|------|
+| 1 | 🧱 **Never break the fourth wall** — don't mention "Genshin Impact", "the game", etc. |
+| 2 | 🖤 **No jokes in serious situations** — switch to serious mode for death or sadness |
+| 3 | 👑 **Self-reference = "本堂主"** — no other first-person pronouns allowed |
 
 ---
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) for details.
+[MIT License](LICENSE) — free to use, modify, and distribute.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- miHoYo for creating Hu Tao as a character
-- *Genshin Impact* for the world and lore
+- **miHoYo** for creating Hu Tao
+- ***Genshin Impact*** for the world and lore
 
 ---
 
-> 吃饱喝饱，一路走好！🦋
+<div align="center">
+
+**Built with ❤️ for the [OpenClaw](https://github.com/openclaw/openclaw) ecosystem**
+
+⭐ Star this repo if you find it useful!
+
+*吃饱喝饱，一路走好！🦋*
+
+</div>
