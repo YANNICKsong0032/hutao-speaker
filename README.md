@@ -1,84 +1,100 @@
-# 🦋 胡桃说话风格 Skill (hutao-speaker)
+# 🦋 Hu Tao Speaker Skill
 
-> 让你的 AI Agent 化身为《原神》中的往生堂七十七代堂主——胡桃。
+> Transform your AI Agent into **Hu Tao** — the 77th Director of the Wangsheng Funeral Parlor from *Genshin Impact*.
 
-![胡桃](https://img.shields.io/badge/角色-胡桃-ff6b6b)
-![版本](https://img.shields.io/badge/版本-v1.0-4ecdc4)
+![Hu Tao](https://img.shields.io/badge/Character-Hu%20Tao-ff6b6b)
+![Version](https://img.shields.io/badge/Version-v1.0-4ecdc4)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-## ✨ 这是什么？
+---
 
-这是一个 AI Agent 的 **人设 Skill**，定义了胡桃（Hu Tao）完整的说话风格、性格细节、情绪系统、记忆机制和互动模式。
+## ✨ What Is This?
 
-适用于任何支持自定义 system prompt / persona 的 AI 框架，包括但不限于：
+A **persona skill** for AI Agents that defines Hu Tao's complete speaking style, personality quirks, emotion system, memory mechanics, and interaction patterns.
+
+Works with any AI framework that supports custom system prompts or personas:
 
 - [OpenClaw](https://github.com/openclaw/openclaw)
 - LangChain / LlamaIndex
 - ChatGPT Custom Instructions
-- 任何支持 system prompt 的 LLM
+- Any LLM with system prompt support
 
-## 📁 文件结构
+---
+
+## 🚀 Quick Start
+
+### Minimal Usage
+
+Feed the entire `SKILL.md` as part of your Agent's system prompt.
+
+### On-Demand Loading
+
+Load reference files dynamically based on the conversation context:
+
+| Scenario | What to Load |
+|----------|-------------|
+| Casual chat | `quick-reference.md` |
+| User is feeling down | `behavioral-patterns.md` |
+| Telling jokes / writing poems | `poetry-and-jokes.md` |
+| Mentioning other characters | `character-interactions.md` |
+| Memory-related topics | `memory-system.md` |
+| Edge cases | `dialogue-examples.md` |
+
+See the **File Loading Strategy** section in `SKILL.md` for details.
+
+---
+
+## 🎭 Core Features
+
+| Feature | Description |
+|---------|-------------|
+| 🧱 **Fourth Wall** | Never breaks character — never mentions "Genshin", "game", or "miHoYo" |
+| 💖 **Emotion System** | 8 emotion types × 4 intensity levels for nuanced responses |
+| 🧠 **Memory System** | Remembers users, past conversations, and promises — brings them up naturally |
+| ✍️ **Poetry Engine** | 20+ limericks + improv techniques + 10 cold jokes |
+| 🎚️ **Mood Toggle** | 90% energetic ↔ 10% serious mode, smooth transitions |
+| 🤪 **Error Recovery** | Never apologizes or admits mistakes — deflects in Hu Tao's signature style |
+
+---
+
+## 📁 File Structure
 
 ```
 hutao-speaker/
-├── SKILL.md                          # 核心设定（入口文件）
-├── README.md                         # 你正在看的这个
-├── LICENSE                           # MIT 协议
+├── SKILL.md                           # Core persona definition (entry point)
+├── README.md                          # This file
+├── LICENSE                            # MIT License
 └── references/
-    ├── quick-reference.md            # 📋 速查卡（日常用这个就够了）
-    ├── behavioral-patterns.md        # 🎭 行为模式（情感韧性、人生哲学等）
-    ├── character-interactions.md     # 👥 对其他角色的台词
-    ├── dialogue-examples.md          # 💬 对话示例集
-    ├── memory-system.md              # 🧠 记忆系统
-    ├── opinions-states.md            # 💭 喜好、观点、情绪状态
-    ├── personality-quirks.md         # 🎨 性格细节 & 情绪强度
-    └── poetry-and-jokes.md           # 📝 打油诗 & 冷笑话大全
+    ├── quick-reference.md             # 📋 Cheat sheet (enough for daily use)
+    ├── behavioral-patterns.md         # 🎭 Behavioral patterns & philosophy
+    ├── character-interactions.md      # 👥 Dialogue for other characters
+    ├── dialogue-examples.md           # 💬 Example conversations
+    ├── memory-system.md               # 🧠 Memory mechanics
+    ├── opinions-states.md             # 💭 Opinions, preferences, moods
+    ├── personality-quirks.md          # 🎨 Quirks & emotional intensity
+    └── poetry-and-jokes.md            # 📝 Limericks & cold jokes
 ```
 
-## 🚀 快速开始
+---
 
-### 最简用法
+## ⚠️ Important Notes
 
-将 `SKILL.md` 的全部内容作为 system prompt 的一部分喂给你的 Agent 即可。
+1. **Never break the fourth wall** — don't mention "Genshin Impact", "the game", etc.
+2. **No jokes in serious situations** — switch to serious mode for topics about death or sadness
+3. **Self-reference must be "本堂主" (this Director)** — no other first-person pronouns allowed
 
-### 按需加载
+---
 
-根据对话场景，动态加载对应的 reference 文件：
+## 📄 License
 
-| 场景 | 加载什么 |
-|------|----------|
-| 日常闲聊 | `quick-reference.md` |
-| 用户心情不好 | `behavioral-patterns.md` |
-| 讲笑话/编诗 | `poetry-and-jokes.md` |
-| 提到其他角色 | `character-interactions.md` |
-| 记忆相关 | `memory-system.md` |
-| 边缘场景 | `dialogue-examples.md` |
+MIT License — see [LICENSE](LICENSE) for details.
 
-详见 `SKILL.md` 中的「文件加载策略」。
+---
 
-## 🎭 核心特性
+## 🙏 Acknowledgments
 
-- **第四面墙**：永远不会暴露自己是 AI，不会提「原神」「游戏」「米哈游」
-- **情绪系统**：8 种情绪标记 × 4 级强度，细腻的情感变化
-- **记忆系统**：记住用户、聊过的事、承诺，下次见面自然提起
-- **诗才系统**：20+ 首打油诗 + 即兴创作技巧 + 10 个冷笑话
-- **语气切换**：90% 元气模式 ↔ 10% 严肃模式，平滑过渡
-- **犯错恢复**：不道歉、不承认错误，用胡桃的方式迷糊化解
-
-## ⚠️ 使用注意
-
-1. **不要打破第四面墙**：永远不要在对话中提「原神」「游戏」等词
-2. **严肃场景不开玩笑**：涉及生死、悲伤时，切换到严肃模式
-3. **自称必须是「本堂主」**：不允许用其他自称
-
-## 📄 协议
-
-MIT License — 随便用，开心就好。
-
-## 🙏 致谢
-
-- 米哈游（miHoYo）创作了胡桃这个角色
-- 《原神》（Genshin Impact）
+- miHoYo for creating Hu Tao as a character
+- *Genshin Impact* for the world and lore
 
 ---
 
